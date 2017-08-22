@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>ClarWan Blog</title>
+  <subtitle>.net程序员，时间管理，自我管理，阅读，写作，程序员的自留地</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-08-19T11:03:18.801Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>ClarWan</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>博客搭建笔记</title>
+    <link href="http://yoursite.com/2017/07/19/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2017/07/19/博客搭建笔记/</id>
+    <published>2017-07-19T06:59:44.000Z</published>
+    <updated>2017-08-19T11:03:18.801Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="0x1-起因-写作博客的经历"><a href="#0x1-起因-写作博客的经历" class="headerlink" title="0x1 起因 写作博客的经历"></a>0x1 起因 写作博客的经历</h2><p>三人行必有我师 搭建博客和更多的人交流学习提高自己!</p>
+<p>我一直是一个不善言辞的人，第一次知道博客是在大学的时候，第一次上网是在初中07年左右。之前只是看别人写博客看别人的文章，我一直是一个信息的获取者，没有输出过什么。所以一直想搭建一个自己博客。但是现在才搭建好，因为拖延症比较厉害。</p>
+<p>最开始写的第一篇博客是在csdn或者只能算是一个篇学习笔记。现在记录一下前期搭建这个博客的过程。方便想创建自己博客的同学参考一下，也是对自己做过的事情做一个笔记记录。</p>
+<p>我经常会这样好多东西，要用的时候百度一下跟着做一步步把环境搭好，就是照着别人写的教程走然后不知道 为什么，这就导致无论什么时候当时是会做出来但是不够好。（做事情不够极致）之前也跟着网上的教程搭建过但是搭好之后就一直放在硬盘里面了，就一个hello world 文章。做事情虎头蛇尾 (需要有安排和计划)</p>
+<h2 id="0x2-博客搭建的准备和需要用到的知识"><a href="#0x2-博客搭建的准备和需要用到的知识" class="headerlink" title="0x2 博客搭建的准备和需要用到的知识"></a>0x2 博客搭建的准备和需要用到的知识</h2><ul>
+<li>基于github网站的page服务 （不懂可以百度一下）github是一个开源代码管理软件 </li>
+<li>基于<a href="http://192.168.5.108:4001/2017/07/19/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/" target="_blank" rel="external">hexo</a> 开源博客框架使用node.js编写, 将支持的类型的文件转换成静态Web页面（html+css+JavaScript）。</li>
+<li>git 命令知识 </li>
+</ul>
+<h2 id="0x3-开始创建之前的准备"><a href="#0x3-开始创建之前的准备" class="headerlink" title="0x3 开始创建之前的准备"></a>0x3 开始创建之前的准备</h2><p>我是在我的windows7 64 位笔记本上面搭建的，当然你也可以在 Macos 或者Linux(ubuntu或者其他)<br>系统上进行搭建。</p>
+<h3 id="1工具的安装"><a href="#1工具的安装" class="headerlink" title="1工具的安装"></a>1工具的安装</h3><ul>
+<li>1安装git工具 这里我使用的是<a href="https://git-scm.com/" target="_blank" rel="external">Git</a> 工具(qq电脑管家就可以下载了速度快)</li>
+<li>2 下载并安装 <a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></li>
+<li>3 (可选)如果需要对博客进行源代码管理，可以安装sourceTree或者gitExtensions 可视化git管理工具方便直接通过界面管理代码</li>
+<li>3安装hexo 在git bash命令行中使用命令进行安装</li>
+</ul>
+<p>1.配置淘宝源地址 下载速度快点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm config set registry https://registry.npm.taobao.org</div></pre></td></tr></table></figure>
+<p>2.安装npm 命令工具</p>
+<p><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></p>
+<p>3.安装hexo程序</p>
+<p>前面的 node.js和npm命令安装好没有问题之后就可以安装hexo了</p>
+<p><code>Npm install –g hexo   #安装hexo命令</code></p>
+<p>4.安装hexo 必备插件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-index --save  <span class="comment">#索引生成器   </span></div><div class="line">npm install hexo-generator-archive --save <span class="comment">#归档生成器 </span></div><div class="line">npm install hexo-generator-category --save \<span class="comment">#分类生成器 </span></div><div class="line">npm install hexo-generator-tag --save \<span class="comment">#标签生成器 </span></div><div class="line">npm install hexo-server --save \<span class="comment">#本地服务 </span></div><div class="line">npm install hexo-deployer-git --save \<span class="comment">#hexo通过git发布（必装） </span></div><div class="line">npm install hexo-renderer-marked@0.2.7 \--save \<span class="comment">#渲染器 </span></div><div class="line">npm install hexo-renderer-stylus@0.3.0 \--save \<span class="comment">#渲染器</span></div></pre></td></tr></table></figure>
+<h3 id="2博客的初始化"><a href="#2博客的初始化" class="headerlink" title="2博客的初始化"></a>2博客的初始化</h3><p>选择一个空白文件夹右键 git bash工具进行<br>Hexo init 命令</p>
+<p>生成静态页面<br>Hexo processing  简写 hexo p</p>
+<p>启动本地服务<br>Hexo server 简写 hexo  s</p>
+<p>启动成功之后查看没有问题之后就可以进行相应的配置，关联自己的github帐号生成pages 网站项目了，就可以使用网址行访问了</p>
+<p>比如我的<a href="http://clarwan.coding.me/#" target="_blank" rel="external">博客</a></p>
+<h3 id="3配置ssh公钥-用于推送本地博客文件"><a href="#3配置ssh公钥-用于推送本地博客文件" class="headerlink" title="3配置ssh公钥 用于推送本地博客文件"></a>3配置ssh公钥 用于推送本地博客文件</h3><p>远程代码是基于SSH的，所以需要SSH的相关配置。方法是现在本地生成SSH公钥，然后添加到Github上面。具体的操作如下：</p>
+<p>1 查看之前的密钥文件<br><code>ls -al ~/.ssh</code><br>存在全部删除（上一次认证的密钥文件，如果帐号没有变化直接使用）</p>
+<p>2 然后重新生成 邮箱地址填写你注册的GitHub帐号的邮箱地址</p>
+<p><code>ssh-keygen -t rsa -C &quot;your@163.com&quot;</code></p>
+<p>3 添加密钥<br><code>ssh-add ~/.ssh/id_rsa
+如果出错了 执行命令清除
+eval</code>ssh-agent -s<code>ssh-add</code></p>
+<p>4 复制密钥<br><code>clip &lt; ~/.ssh/id_rsa.pub</code><br>把密钥内容复制到粘贴板中 或者可以打开文件id_rsa.pub(文本编辑器打开复制内容)<br>id_rsa.pub文件在User\当前登录用户.ssh 目录下面</p>
+<p>5 把SSH密钥添加到Github上<br>登陆Github后找的page库视图页面，点击settings，然后进入SSH keys，把id_rsa.pub文件里内容添加进去就好了。</p>
+<p>coding 也是同样的步骤 只不过把邮箱换成注册coding的邮箱就可以了</p>
+<h3 id="4配置GitHub-Repositories"><a href="#4配置GitHub-Repositories" class="headerlink" title="4配置GitHub Repositories"></a>4配置GitHub Repositories</h3><p>1 登录GitHub网站，创建一个Repositories 按照默认设置来就行了<br>2 仓库名称需要注意  仓库名必须为<font color="red">【your_user_name.github.io】</font></p>
+<p>3 编辑配置文件，文件位于根目录下_config.yml<br>在最后一行找到 deploy 节点或者全局搜索，没有就新增一个</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy: </div><div class="line">	type: git #有的版本是github也是个小坑，注意 </div><div class="line">	repo: https://github.com/xxx/xxx.github.com.git #我的github是xufeng911 换成你本人的 </div><div class="line">	branch: master</div></pre></td></tr></table></figure>
+<p>注意yml格式文件冒号后面必须加一个空格</p>
+<p>4 部署远程博客，输入以下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo d </div><div class="line">#或者使用 hexo d -g 两条命令合在一起执行</div><div class="line">INFO Deploy done: git #出现下面的提示表示部署成功</div></pre></td></tr></table></figure>
+<p>执行完毕后访问 your_user_name.github.io<br>即可看到部署在github上的默认博客,第一次发布可能会有10分钟的延迟。</p>
+<h3 id="5配置coding网站，"><a href="#5配置coding网站，" class="headerlink" title="5配置coding网站，"></a>5配置coding网站，</h3><p>和GitHub相同需要先创建一个库然后推送<br>修改deploy节点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository:</div><div class="line">    github: https://github.com/xxxx/xxxxx.github.io.git,master</div><div class="line">    coding: https://git.coding.net/xxxx/xxx.git,master</div></pre></td></tr></table></figure>
+<p>将xxx替换为你自己的用户名即可</p>
+<h3 id="Tips-需要注意的细节和事项"><a href="#Tips-需要注意的细节和事项" class="headerlink" title="Tips 需要注意的细节和事项"></a>Tips 需要注意的细节和事项</h3><ol>
+<li>注意一定要验证Github的验证邮件。</li>
+<li>出现其他任何的问题，先删除博客目录下的db.json文件，然后清理再部署远程博客，操作时输入以下的命令<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo d -g</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>走到了这一步，你应该知道了你的博客仅仅相当于一个毛坯房而已，意味着后面需要你自己一点点去装修，换成你喜欢的风格样式。至于具体如何装修你的博客，我们下一篇再说。</p>
+<p>3 修改主题<br>先复制需要的主体到目录的themes文件夹<br>然后修改配置文件  _configy.yum<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Extensions</div><div class="line">	Theme : pacman</div><div class="line">stylus:</div><div class="line">  compress: true</div></pre></td></tr></table></figure></p>
+<p>修改你的博客根目录下的_config.yml配置文件中的theme属性，将其设置为jacman。同时建议设置stylus属性中的compress值为true，会自动压缩 CSS文件，hexo默认配置中不包含这一项，建议开启。 </p>
+<p>具体配置方法在下一篇 hexo 主题配置笔记中发表</p>
+<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><p>1 域名绑定：<br>推荐参考文章：<a href="http://blog.csdn.net/qq_23435721/article/details/50876942" target="_blank" rel="external">http://blog.csdn.net/qq_23435721/article/details/50876942</a></p>
+<p>2 以上搭建过程共参考以下文章:<br><a href="http://blog.csdn.net/u011148116/article/details/52274773" target="_blank" rel="external">http://blog.csdn.net/u011148116/article/details/52274773</a></p>
+<p><a href="http://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="external">http://www.cnblogs.com/zhcncn/p/4097881.html</a><br><a href="https://segmentfault.com/a/1190000000458953" target="_blank" rel="external">https://segmentfault.com/a/1190000000458953</a><br><a href="http://www.cnblogs.com/liulangmao/p/4323064.html" target="_blank" rel="external">http://www.cnblogs.com/liulangmao/p/4323064.html</a><br><a href="http://blog.csdn.net/qq_23435721/article/details/50876942" target="_blank" rel="external">http://blog.csdn.net/qq_23435721/article/details/50876942</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;0x1-起因-写作博客的经历&quot;&gt;&lt;a href=&quot;#0x1-起因-写作博客的经历&quot; class=&quot;headerlink&quot; title=&quot;0x1 起因 写作博客的经历&quot;&gt;&lt;/a&gt;0x1 起因 写作博客的经历&lt;/h2&gt;&lt;p&gt;三人行必有我师 搭建博客和更多的人交流学习提
+    
+    </summary>
+    
+      <category term="hexo笔记" scheme="http://yoursite.com/categories/hexo%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="hexo 笔记" scheme="http://yoursite.com/tags/hexo-%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo pacman 主题使用笔记</title>
+    <link href="http://yoursite.com/2017/06/19/hexo-pacman%20%E4%B8%BB%E9%A2%98%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2017/06/19/hexo-pacman 主题使用笔记/</id>
+    <published>2017-06-19T07:00:11.000Z</published>
+    <updated>2017-08-20T14:12:02.595Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="hexo-pacman-笔记"><a href="#hexo-pacman-笔记" class="headerlink" title="hexo pacman 笔记"></a>hexo pacman 笔记</h1><p>之前 上一遍已经把hexo 博客的安装配置</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;hexo-pacman-笔记&quot;&gt;&lt;a href=&quot;#hexo-pacman-笔记&quot; class=&quot;headerlink&quot; title=&quot;hexo pacman 笔记&quot;&gt;&lt;/a&gt;hexo pacman 笔记&lt;/h1&gt;&lt;p&gt;之前 上一遍已经把hexo 博客的安装配置&lt;
+    
+    </summary>
+    
+    
+      <category term="hexo 博客搭建" scheme="http://yoursite.com/tags/hexo-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>测试文章1</title>
+    <link href="http://yoursite.com/2017/06/07/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A01/"/>
+    <id>http://yoursite.com/2017/06/07/测试文章1/</id>
+    <published>2017-06-07T09:38:24.000Z</published>
+    <updated>2017-08-07T15:46:03.135Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2016/06/07/hello-world/"/>
+    <id>http://yoursite.com/2016/06/07/hello-world/</id>
+    <published>2016-06-07T07:38:24.000Z</published>
+    <updated>2017-08-19T11:02:59.673Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
