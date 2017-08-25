@@ -100,18 +100,26 @@ eval</code>ssh-agent -s<code>ssh-add</code></p>
   </entry>
   
   <entry>
-    <title>hexo pacman 主题使用笔记</title>
+    <title>hexo pacman 主题配置记录</title>
     <link href="http://yoursite.com/2017/06/19/hexo-pacman%20%E4%B8%BB%E9%A2%98%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2017/06/19/hexo-pacman 主题使用笔记/</id>
     <published>2017-06-19T07:00:11.000Z</published>
-    <updated>2017-08-20T14:12:02.595Z</updated>
+    <updated>2017-08-23T14:41:38.617Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="hexo-pacman-笔记"><a href="#hexo-pacman-笔记" class="headerlink" title="hexo pacman 笔记"></a>hexo pacman 笔记</h1><p>之前 上一遍已经把hexo 博客的安装配置</p>
+    <content type="html"><![CDATA[<h1 id="hexo-pacman-笔记"><a href="#hexo-pacman-笔记" class="headerlink" title="hexo pacman 笔记"></a>hexo pacman 笔记</h1><p>之前的文章已经把hexo 博客的安装配搭建写了，现在是我在添加分类，添加文章以及使用技巧。<br><a href="http://a-limon.github.io/pacman/hello/introducing-pacman-theme/" target="_blank" rel="external">参考文档</a>这是GitHub上的一个配置文档，我搭建好之后发现有好多地方没有写清楚。果有帮助也算是一点小小的贡献。</p>
+<h2 id="配置Tags-标签-和-Caegories-分类"><a href="#配置Tags-标签-和-Caegories-分类" class="headerlink" title="配置Tags(标签) 和 Caegories(分类)"></a>配置Tags(标签) 和 Caegories(分类)</h2><p>1 新建一个Tags页面 命令为<code>categories</code> </p>
+<p><code>hexo new page categories</code></p>
+<p>或者手动建立文件夹然后修改index.md文件。下面是参考文档中的指南但是很坑，文件内容需要修改好，这个问题我弄了大半天</p>
+<ul>
+<li>menu 默认没有启用 /tags 和 /categories 页面，如果需要启用请在博客目录下的source文件夹中分别建立tags 和 categories文件夹每个文件夹中分别包含一个index.md文件。内容为：</li>
+</ul>
+<p>下面我发出我内容截图</p>
+<p><img src="http://ov527kbv3.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170823210736.png" alt=""><br>在根目录下的 source 文件夹</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;hexo-pacman-笔记&quot;&gt;&lt;a href=&quot;#hexo-pacman-笔记&quot; class=&quot;headerlink&quot; title=&quot;hexo pacman 笔记&quot;&gt;&lt;/a&gt;hexo pacman 笔记&lt;/h1&gt;&lt;p&gt;之前 上一遍已经把hexo 博客的安装配置&lt;
+      &lt;h1 id=&quot;hexo-pacman-笔记&quot;&gt;&lt;a href=&quot;#hexo-pacman-笔记&quot; class=&quot;headerlink&quot; title=&quot;hexo pacman 笔记&quot;&gt;&lt;/a&gt;hexo pacman 笔记&lt;/h1&gt;&lt;p&gt;之前的文章已经把hexo 博客的安装配搭建写
     
     </summary>
     
@@ -121,16 +129,46 @@ eval</code>ssh-agent -s<code>ssh-add</code></p>
   </entry>
   
   <entry>
-    <title>测试文章1</title>
-    <link href="http://yoursite.com/2017/06/07/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A01/"/>
-    <id>http://yoursite.com/2017/06/07/测试文章1/</id>
+    <title>pymssql 访问mssql数据库</title>
+    <link href="http://yoursite.com/2017/06/07/python%E8%AE%BF%E9%97%AEmssql%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <id>http://yoursite.com/2017/06/07/python访问mssql数据库/</id>
     <published>2017-06-07T09:38:24.000Z</published>
-    <updated>2017-08-07T15:46:03.135Z</updated>
+    <updated>2017-08-25T11:17:52.491Z</updated>
+    
+    <content type="html"><![CDATA[<p>#pymssql 访问mssql数据库<br>python.org 网站关于python访问各种数据库的<a href="https://wiki.python.org/moin/DatabaseInterfaces" target="_blank" rel="external">介绍</a><br>这里介绍ADO方式访问 微软MSSQL数据库</p>
+<h2 id="1-准备工作，基本工具的安装"><a href="#1-准备工作，基本工具的安装" class="headerlink" title="1 准备工作，基本工具的安装"></a>1 准备工作，基本工具的安装</h2><pre><code>(python安装，pip安装,pymssql第三方库安装)
+</code></pre><h3 id="1-1-安装-python-2-7"><a href="#1-1-安装-python-2-7" class="headerlink" title="1.1 安装 python 2.7"></a>1.1 安装 python 2.7</h3><p>python2.7 <a href="https://www.python.org/ftp/python/2.7.13/python-2.7.13.msi" target="_blank" rel="external">下载地址</a><br>！<a href="http://ov527kbv3.bkt.clouddn.com/python27Download.png" target="_blank" rel="external"></a><br>也可以访问 www.python.org 选择其他版本进行安装 ，装完之后配置一下环境变量<br>我的电脑-属性-高级系统设置-高级-环境变量.找到path变量然后把python安装目录添加上去。<br><img src="http://ov527kbv3.bkt.clouddn.com/win7PathSetFun123.png" alt=""></p>
+<h3 id="1-2-配置pip"><a href="#1-2-配置pip" class="headerlink" title="1.2 配置pip"></a>1.2 配置pip</h3><p>将C:\Python27\Scripts 目录添加到系统环境变量<br>打开命令行输入 </p>
+<p><code>pip install wheel</code></p>
+<p>就安装好了wheel 工具可以安装 whl插件了</p>
+<h3 id="1-3-安装-pymssql"><a href="#1-3-安装-pymssql" class="headerlink" title="1.3 安装 pymssql"></a>1.3 安装 pymssql</h3><p><a href="https://pypi.python.org/pypi/pymssql/2.1.3" target="_blank" rel="external">下载</a>安装pymssql第三方插件,因为我使用的是python2.7所以选择第一个cp27，win32第二个也下载了的没有安装成功<br><img src="http://ov527kbv3.bkt.clouddn.com/pymssql27-win32-download.png" alt=""></p>
+<h2 id="开始使用python连接MSSQL数据库"><a href="#开始使用python连接MSSQL数据库" class="headerlink" title="开始使用python连接MSSQL数据库"></a>开始使用python连接MSSQL数据库</h2><p>官方网站 <a href="http://pymssql.org/en/stable/index.html" target="_blank" rel="external">http://pymssql.org/en/stable/index.html</a> 里面有详细的介绍和说明<br>下面是我从官方网站的<a href="http://pymssql.org/en/stable/pymssql_examples.html" target="_blank" rel="external">例子代码</a>修改的测试代码<br>示例代码<br><img src="http://ov527kbv3.bkt.clouddn.com/AccessDBTest.png" alt=""></p>
+<p>这里讲解一个地方：MSSQL 有两种认证方式登录数据库这里可以分别进行设置</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#使用帐号密码方式这里的本地库的测试用户</span></div><div class="line"><span class="keyword">from</span> os <span class="keyword">import</span> getenv</div><div class="line"><span class="keyword">import</span> pymssql</div><div class="line"></div><div class="line">server = <span class="string">"."</span></div><div class="line">user = <span class="string">"sa"</span></div><div class="line">password = <span class="string">"112233"</span></div><div class="line"></div><div class="line">conn = pymssql.connect(server, user, password, <span class="string">"Securities_DB"</span>,<span class="string">'utf8'</span>)</div><div class="line"><span class="comment">#conn=pymssql.connect(server='.',user='', password='',database='MyTest',charset='utf8')</span></div><div class="line"><span class="comment">#connect()方法 可以显示的指定参数名次，默认按顺序获取传入的参数值</span></div><div class="line"><span class="comment">#charset指定编码格式</span></div><div class="line">cursor = conn.cursor()</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#使用windows身份认证的方式</div><div class="line">conn = pymssql.connect(</div><div class="line">    host=r&apos;dbhostname\myinstance&apos;,</div><div class="line">    user=r&apos;companydomain\username&apos;,</div><div class="line">    password=PASSWORD,</div><div class="line">    database=&apos;DatabaseOfInterest&apos;</div><div class="line">)</div></pre></td></tr></table></figure>
+<p>执行结果<br>！<a href="http://ov527kbv3.bkt.clouddn.com/170825CreateTableInfo.png" target="_blank" rel="external"></a></p>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>关于中文乱码</p>
+<ul>
+<li><p>文件头加上 #coding=utf8 (必须)</p>
+</li>
+<li><p>连接的时候加入charset设置信息<br>  pymssql.connect(host=self.host,user=self.user,password=self.pwd,database=self.db,charset=”utf8”)</p>
+</li>
+<li><p>sql语句中有中文的时候进行encode<br> insertSql = “insert into WeiBo([UserId],[WeiBoContent],[PublishDate]) values(1,’测试’,’2012/2/1’)”.encode(“utf8”)</p>
+</li>
+</ul>
+<p>##参考链接<br>python Wiki 介绍：<a href="https://wiki.python.org/moin/DatabaseInterfaces" target="_blank" rel="external">https://wiki.python.org/moin/DatabaseInterfaces</a><br>pymssql Wiki 介绍: <a href="http://pymssql.org/en/stable/index.html" target="_blank" rel="external">http://pymssql.org/en/stable/index.html</a><br>pip安装: <a href="http://blog.csdn.net/fhl812432059/article/details/51745226" target="_blank" rel="external">http://blog.csdn.net/fhl812432059/article/details/51745226</a><br>pymssql文档 <a href="http://pymssql.org/en/latest/pymssql_examples.html" target="_blank" rel="external">http://pymssql.org/en/latest/pymssql_examples.html</a></p>
+<p>##二维码 欢迎打赏<br>微信<br><img src="http://ov527kbv3.bkt.clouddn.com/WchatPlayCodePhoto.png" alt=""> </p>
+<p>支付宝<br><img src="http://ov527kbv3.bkt.clouddn.com/aliPayCodePhoto.png" alt=""></p>
+]]></content>
     
     <summary type="html">
     
+      &lt;p&gt;#pymssql 访问mssql数据库&lt;br&gt;python.org 网站关于python访问各种数据库的&lt;a href=&quot;https://wiki.python.org/moin/DatabaseInterfaces&quot; target=&quot;_blank&quot; rel=&quot;extern
+    
     </summary>
     
+    
+      <category term="python pymssql" scheme="http://yoursite.com/tags/python-pymssql/"/>
     
   </entry>
   
