@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-19T11:03:18.801Z</updated>
+  <updated>2017-08-26T07:55:36.172Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/07/19/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2017/07/19/博客搭建笔记/</id>
     <published>2017-07-19T06:59:44.000Z</published>
-    <updated>2017-08-19T11:03:18.801Z</updated>
+    <updated>2017-08-26T07:55:36.172Z</updated>
     
     <content type="html"><![CDATA[<h2 id="0x1-起因-写作博客的经历"><a href="#0x1-起因-写作博客的经历" class="headerlink" title="0x1 起因 写作博客的经历"></a>0x1 起因 写作博客的经历</h2><p>三人行必有我师 搭建博客和更多的人交流学习提高自己!</p>
 <p>我一直是一个不善言辞的人，第一次知道博客是在大学的时候，第一次上网是在初中07年左右。之前只是看别人写博客看别人的文章，我一直是一个信息的获取者，没有输出过什么。所以一直想搭建一个自己博客。但是现在才搭建好，因为拖延症比较厉害。</p>
@@ -67,7 +67,7 @@ eval</code>ssh-agent -s<code>ssh-add</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy: </div><div class="line">	type: git #有的版本是github也是个小坑，注意 </div><div class="line">	repo: https://github.com/xxx/xxx.github.com.git #我的github是xufeng911 换成你本人的 </div><div class="line">	branch: master</div></pre></td></tr></table></figure>
 <p>注意yml格式文件冒号后面必须加一个空格</p>
 <p>4 部署远程博客，输入以下命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo d </div><div class="line">#或者使用 hexo d -g 两条命令合在一起执行</div><div class="line">INFO Deploy done: git #出现下面的提示表示部署成功</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">shexo g</div><div class="line">hexo d </div><div class="line">#或者使用 hexo d -g 两条命令合在一起执行</div><div class="line">INFO Deploy done: git #出现下面的提示表示部署成功</div></pre></td></tr></table></figure>
 <p>执行完毕后访问 your_user_name.github.io<br>即可看到部署在github上的默认博客,第一次发布可能会有10分钟的延迟。</p>
 <h3 id="5配置coding网站，"><a href="#5配置coding网站，" class="headerlink" title="5配置coding网站，"></a>5配置coding网站，</h3><p>和GitHub相同需要先创建一个库然后推送<br>修改deploy节点</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository:</div><div class="line">    github: https://github.com/xxxx/xxxxx.github.io.git,master</div><div class="line">    coding: https://git.coding.net/xxxx/xxx.git,master</div></pre></td></tr></table></figure>
@@ -95,7 +95,9 @@ eval</code>ssh-agent -s<code>ssh-add</code></p>
       <category term="hexo笔记" scheme="http://yoursite.com/categories/hexo%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="hexo 笔记" scheme="http://yoursite.com/tags/hexo-%E7%AC%94%E8%AE%B0/"/>
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+      <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -104,7 +106,7 @@ eval</code>ssh-agent -s<code>ssh-add</code></p>
     <link href="http://yoursite.com/2017/06/19/hexo-pacman%20%E4%B8%BB%E9%A2%98%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2017/06/19/hexo-pacman 主题使用笔记/</id>
     <published>2017-06-19T07:00:11.000Z</published>
-    <updated>2017-08-23T14:41:38.617Z</updated>
+    <updated>2017-08-26T10:35:36.189Z</updated>
     
     <content type="html"><![CDATA[<h1 id="hexo-pacman-笔记"><a href="#hexo-pacman-笔记" class="headerlink" title="hexo pacman 笔记"></a>hexo pacman 笔记</h1><p>之前的文章已经把hexo 博客的安装配搭建写了，现在是我在添加分类，添加文章以及使用技巧。<br><a href="http://a-limon.github.io/pacman/hello/introducing-pacman-theme/" target="_blank" rel="external">参考文档</a>这是GitHub上的一个配置文档，我搭建好之后发现有好多地方没有写清楚。果有帮助也算是一点小小的贡献。</p>
 <h2 id="配置Tags-标签-和-Caegories-分类"><a href="#配置Tags-标签-和-Caegories-分类" class="headerlink" title="配置Tags(标签) 和 Caegories(分类)"></a>配置Tags(标签) 和 Caegories(分类)</h2><p>1 新建一个Tags页面 命令为<code>categories</code> </p>
@@ -114,7 +116,10 @@ eval</code>ssh-agent -s<code>ssh-add</code></p>
 <li>menu 默认没有启用 /tags 和 /categories 页面，如果需要启用请在博客目录下的source文件夹中分别建立tags 和 categories文件夹每个文件夹中分别包含一个index.md文件。内容为：</li>
 </ul>
 <p>下面我发出我内容截图</p>
-<p><img src="http://ov527kbv3.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170823210736.png" alt=""><br>在根目录下的 source 文件夹</p>
+<p><img src="http://ov527kbv3.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170823210736.png" alt=""><br>在根目录下的 source 文件夹<br><img src="http://ov527kbv3.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170823215327.png" alt=""><br>可以看到有categories和tags两个目录</p>
+<p>下面注意修改index.md中的内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: Tagcloud </div><div class="line">date: 2017-08-09 17:00</div><div class="line">type: &quot;tags&quot;</div><div class="line">loyout: &quot;tags&quot;</div><div class="line">---</div></pre></td></tr></table></figure>
+<p>注意需要加双引号<br>然后再修改另一个地方 scaffolds\post.md 文件,完全按照下面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: &#123;&#123; title &#125;&#125;</div><div class="line">date: &#123;&#123; date &#125;&#125;</div><div class="line">tags: &#123;&#123; tags &#125;&#125;</div><div class="line">categories: &#123;&#123; categories &#125;&#125;</div><div class="line"></div><div class="line">---</div></pre></td></tr></table></figure></p>
 ]]></content>
     
     <summary type="html">
@@ -123,8 +128,12 @@ eval</code>ssh-agent -s<code>ssh-add</code></p>
     
     </summary>
     
+      <category term="hexo笔记" scheme="http://yoursite.com/categories/hexo%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="hexo 博客搭建" scheme="http://yoursite.com/tags/hexo-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+      <category term="博客搭建" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   
@@ -133,7 +142,7 @@ eval</code>ssh-agent -s<code>ssh-add</code></p>
     <link href="http://yoursite.com/2017/06/07/python%E8%AE%BF%E9%97%AEmssql%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     <id>http://yoursite.com/2017/06/07/python访问mssql数据库/</id>
     <published>2017-06-07T09:38:24.000Z</published>
-    <updated>2017-08-25T11:17:52.491Z</updated>
+    <updated>2017-08-26T10:34:34.468Z</updated>
     
     <content type="html"><![CDATA[<p>#pymssql 访问mssql数据库<br>python.org 网站关于python访问各种数据库的<a href="https://wiki.python.org/moin/DatabaseInterfaces" target="_blank" rel="external">介绍</a><br>这里介绍ADO方式访问 微软MSSQL数据库</p>
 <h2 id="1-准备工作，基本工具的安装"><a href="#1-准备工作，基本工具的安装" class="headerlink" title="1 准备工作，基本工具的安装"></a>1 准备工作，基本工具的安装</h2><pre><code>(python安装，pip安装,pymssql第三方库安装)
@@ -167,8 +176,35 @@ eval</code>ssh-agent -s<code>ssh-add</code></p>
     
     </summary>
     
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
     
-      <category term="python pymssql" scheme="http://yoursite.com/tags/python-pymssql/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="pymssql" scheme="http://yoursite.com/tags/pymssql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>个人独立博客集合</title>
+    <link href="http://yoursite.com/2017/06/06/%E4%B8%AA%E4%BA%BA%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2%E9%9B%86%E5%90%88/"/>
+    <id>http://yoursite.com/2017/06/06/个人独立博客集合/</id>
+    <published>2017-06-06T10:25:07.000Z</published>
+    <updated>2017-08-26T10:35:15.562Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="个人博客"><a href="#个人博客" class="headerlink" title="个人博客"></a>个人博客</h1><p>  陈素封: <a href="http://www.cnfeat.com" target="_blank" rel="external">http://www.cnfeat.com</a><br>  日积月累: <a href="http://www.yanmin99.com" target="_blank" rel="external">http://www.yanmin99.com</a><br>  pkwan: <a href="http://pkwans.com/" target="_blank" rel="external">http://pkwans.com/</a><br>  moeka: <a href="https://moeka.me/" target="_blank" rel="external">https://moeka.me/</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;个人博客&quot;&gt;&lt;a href=&quot;#个人博客&quot; class=&quot;headerlink&quot; title=&quot;个人博客&quot;&gt;&lt;/a&gt;个人博客&lt;/h1&gt;&lt;p&gt;  陈素封: &lt;a href=&quot;http://www.cnfeat.com&quot; target=&quot;_blank&quot; rel=&quot;ex
+    
+    </summary>
+    
+      <category term="收集整理" scheme="http://yoursite.com/categories/%E6%94%B6%E9%9B%86%E6%95%B4%E7%90%86/"/>
+    
+    
+      <category term="独立博客集合" scheme="http://yoursite.com/tags/%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2%E9%9B%86%E5%90%88/"/>
     
   </entry>
   
