@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-26T07:55:36.172Z</updated>
+  <updated>2017-08-27T03:48:15.791Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/07/19/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2017/07/19/博客搭建笔记/</id>
     <published>2017-07-19T06:59:44.000Z</published>
-    <updated>2017-08-26T07:55:36.172Z</updated>
+    <updated>2017-08-27T03:48:15.791Z</updated>
     
     <content type="html"><![CDATA[<h2 id="0x1-起因-写作博客的经历"><a href="#0x1-起因-写作博客的经历" class="headerlink" title="0x1 起因 写作博客的经历"></a>0x1 起因 写作博客的经历</h2><p>三人行必有我师 搭建博客和更多的人交流学习提高自己!</p>
 <p>我一直是一个不善言辞的人，第一次知道博客是在大学的时候，第一次上网是在初中07年左右。之前只是看别人写博客看别人的文章，我一直是一个信息的获取者，没有输出过什么。所以一直想搭建一个自己博客。但是现在才搭建好，因为拖延症比较厉害。</p>
@@ -190,11 +190,12 @@ eval</code>ssh-agent -s<code>ssh-add</code></p>
     <link href="http://yoursite.com/2017/06/06/%E4%B8%AA%E4%BA%BA%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2%E9%9B%86%E5%90%88/"/>
     <id>http://yoursite.com/2017/06/06/个人独立博客集合/</id>
     <published>2017-06-06T10:25:07.000Z</published>
-    <updated>2017-08-26T11:39:27.868Z</updated>
+    <updated>2017-08-27T03:08:54.367Z</updated>
     
     <content type="html"><![CDATA[<h2 id="程序员"><a href="#程序员" class="headerlink" title="程序员"></a>程序员</h2><p>酷壳: <a href="https://coolshell.cn" target="_blank" rel="external">https://coolshell.cn</a><br>周公: <a href="http://zhoufoxcn.blog.51cto.com" target="_blank" rel="external">http://zhoufoxcn.blog.51cto.com</a><br>赵颉: <a href="http://blog.zhaojie.me" target="_blank" rel="external">http://blog.zhaojie.me</a><br>刘未鹏: <a href="http://mindhacks.cn" target="_blank" rel="external">http://mindhacks.cn</a></p>
 <h2 id="net"><a href="#net" class="headerlink" title=".net"></a>.net</h2><h2 id="csdn"><a href="#csdn" class="headerlink" title="csdn"></a>csdn</h2><h2 id="博客园"><a href="#博客园" class="headerlink" title="博客园"></a>博客园</h2><h2 id="个人博客"><a href="#个人博客" class="headerlink" title="个人博客"></a>个人博客</h2><p>读立写生: <a href="http://www.cnfeat.com" target="_blank" rel="external">http://www.cnfeat.com</a><br>日积月累: <a href="http://www.yanmin99.com" target="_blank" rel="external">http://www.yanmin99.com</a><br>pkwan: <a href="http://pkwans.com" target="_blank" rel="external">http://pkwans.com</a><br>moeka: <a href="https://moeka.me" target="_blank" rel="external">https://moeka.me</a><br>steven5538: <a href="http://blog.steven5538.tw" target="_blank" rel="external">http://blog.steven5538.tw</a><br>claudxiao: <a href="http://www.claudxiao.net/" target="_blank" rel="external">http://www.claudxiao.net/</a><br>月光博客: <a href="http://www.williamlong.info" target="_blank" rel="external">http://www.williamlong.info</a></p>
 <h2 id="社区"><a href="#社区" class="headerlink" title="社区"></a>社区</h2><p>stackoverflow <a href="http://stackoverflow.com/" target="_blank" rel="external">http://stackoverflow.com/</a></p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>书蠹机虫的博客 <a href="http://blog.sina.com.cn/minzusheying" target="_blank" rel="external">http://blog.sina.com.cn/minzusheying</a><br>老码农 <a href="http://blog.sina.com.cn/u/2154015873" target="_blank" rel="external">http://blog.sina.com.cn/u/2154015873</a><br>1980303827 <a href="http://blog.sina.com.cn/u/1980303827" target="_blank" rel="external">http://blog.sina.com.cn/u/1980303827</a></p>
 ]]></content>
     
     <summary type="html">
